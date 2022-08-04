@@ -1,3 +1,5 @@
+// Author name : Renu Sharma
+
 //java program to count the total number of characters in a string (except space)
 
 package practical;
