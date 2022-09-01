@@ -1,35 +1,45 @@
-//Write a program to find factorial of a number
+//Author name : Renu Sharma
 
-package aug12;
+/* Write a method th find factorial of a number input by user.
+factorial(int n).call this methos from main() and pass argument n .
+Repeat this untill user enters no.
+*/
+package Loop_Project;
 
 import java.util.Scanner;
 
-class fact{
-	public void factNumber()
+class factorial_1
+{
+	void factorial()
 	{
-		System.out.println("Enter number : ");
-		Scanner s=new Scanner(System.in);
-		
-		// take input from user,using Scanner class
-		
-		int num=s.nextInt();
-		int i=1;
+		Scanner sc=new Scanner(System.in);
 		int fact=1;
-		for(i=1;i<=num;i++)
+		String yn="yes";
+		while(yn.equals("yes")) {
+		System.out.println("Enter any to find Factorial : ");
+		int a=sc.nextInt();							//Take input from user
+		System.out.println(".......................\n");
+		for(int i=1;i<=a;i++)
 		{
 			fact=fact*i;
-			
 		}
-		System.out.println("Factorial of the number : "+fact);
-	}
-	}
-
-public class Factorial {
-
-	public static void main(String[] args) {
-		
-		fact obj=new fact();   // call method
-		obj.factNumber();
-		
+		System.out.println(a+" Factorial is : "+fact+"\n");   // print output
+		System.out.println("Do you Check Any Other Factorial ? yes/no");
+		yn=sc.next();
+	} 
 }
+}
+
+
+
+
+public class Factorial 
+{
+	
+	public static void main(String[] args) 
+	{
+		factorial_1 ob=new factorial_1();		// create class object
+		ob.factorial();							// call class method
+
+	}
 }
